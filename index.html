@@ -182,29 +182,44 @@
         }
 
         .image-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 10px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
 
-        .image-container a {
-            display: inline-block;
-            margin-bottom: 10px;
-            width: 100%;
-            /* Ensure each image takes up full width */
-        }
+.image-container a {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 100%;
+    /* Ensure each image takes up full width */
+}
 
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Media query for desktop screens */
+@media (min-width: 768px) {
+    .image-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+    }
+
+    .image-container a {
+        width: auto;
+        /* Reset width to auto to allow grid to manage the width */
+    }
+}
+
 
         .gratitude-corner {
             display: flex;
@@ -494,7 +509,7 @@
             <button class="design-button" onclick="displayRandomDiv()">Random Tags</button>
         </div>
     </div>
-
+<br><br>
     <div id="Thank" class="gratitude-corner">
         <div class="text-center p-2">
             <h2 id="heading" class="gradient-text">
@@ -503,7 +518,7 @@
             <p id="description"></p>
         </div>
         <div class="cornerImg">
-            <img src="https://swiperjs.com/demos/images/nature-2.jpg" alt="">
+            <img src="https://placehold.co/600x400" alt="">
         </div>
 
     </div>
