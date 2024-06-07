@@ -24,7 +24,9 @@
     <!-- fonts style -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700|Roboto:400,700&display=swap"
         rel="stylesheet" />
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet" />
     <!-- responsive style -->
@@ -86,7 +88,7 @@
             /* Ensure content is above the overlay */
             z-index: 2;
             /* Ensure content is above the overlay */
-            padding: 20px;
+            padding: 45px;
             color: white;
         }
 
@@ -177,6 +179,29 @@
             border: none;
             border-color: none;
         }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .image-container a {
+            display: inline-block;
+            margin-bottom: 10px;
+            width: 100%; /* Ensure each image takes up full width */
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
     </style>
 </head>
 
@@ -208,7 +233,7 @@
                         </div>
 
                         <p id="description">
-                            Welcome to Golden Memories! This is a celebration of our journey together, filled with
+                            Welcome to Golden Memories! <br>This is a celebration of our journey together, filled with
                             laughter, love, and unforgettable moments. Explore each section to relive the cherished
                             times we've shared.
                         </p>
@@ -272,19 +297,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="tag_card" style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)">
-                        <div class="tag_card--overlay"></div><!-- Black overlay -->
-                        <div class="tag_card--content">
-                            <div class="button-box">
-                                <button id="mainImage" onclick="toggleDiv('Thank')"> #Thank You </button>
-                            </div>
-                            <br>
-                            <p class="gradient-text2"><br>Gratitude Corner</p>
-                        </div>
-                    </div>
-                </div>
-
 
             </div>
             <div class="swiper-pagination"></div>
@@ -300,8 +312,22 @@
             </h2>
             <p id="description">Step back into the days of innocence and endless play. Relive our earliest adventures, from sandbox escapades to our first big dreams. These were the moments that laid the foundation for a lifelong friendship.</p>
         </div>
+
+        <div class="image-container">
+            <a href="https://swiperjs.com/demos/images/nature-2.jpg" data-fancybox="images" data-caption="Image 1">
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" alt="Image 1">
+            </a>
+            <a href="https://swiperjs.com/demos/images/nature-2.jpg" data-fancybox="images" data-caption="Image 2">
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" alt="Image 2">
+            </a>
+            <a href="https://swiperjs.com/demos/images/nature-2.jpg" data-fancybox="images" data-caption="Image 3">
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" alt="Image 3">
+            </a>
+        </div>
        
-        <button class="design-button" onclick="displayRandomDiv()">Random</button>
+     <div class="text-center">
+<button class="design-button" onclick="displayRandomDiv()">Random Tags</button>
+</div>
     </div>
     <div id="School" style="display: none;">
         <div class="text-center p-2">
@@ -310,7 +336,9 @@
             </h2>
             <p id="description">From classroom capers to recess fun, school days were all about learning and laughter. Dive into the memories of school events, shared secrets, and the friendships that stood the test of time.</p>
         </div>
-        <button class="design-button" onclick="displayRandomDiv()">Random</button>
+     <div class="text-center">
+<button class="design-button" onclick="displayRandomDiv()">Random Tags</button>
+</div>
     </div>
     <div id="Adventures" style="display: none;">
         <div class="text-center p-2">
@@ -319,7 +347,9 @@
             </h2>
             <p id="description">Life's greatest stories often come from the unexpected. Join us on our epic escapades, from spontaneous road trips to wild summer breaks, where every detour became a memorable adventure.</p>
         </div>
-        <button class="design-button" onclick="displayRandomDiv()">Random</button>
+     <div class="text-center">
+<button class="design-button" onclick="displayRandomDiv()">Random Tags</button>
+</div>
     </div>
     <div id="Celebrations" style="display: none;">
         <div class="text-center p-2">
@@ -328,17 +358,19 @@
             </h2>
             <p id="description">Every celebration was a chance to create unforgettable memories. Whether it was a surprise party, a milestone birthday, or just a festive get-together, these are the moments that brought pure joy.</p>
         </div>
-        <button class="design-button" onclick="displayRandomDiv()">Random</button>
+     <div class="text-center">
+<button class="design-button" onclick="displayRandomDiv()">Random Tags</button>
+</div>
     </div>
 
-    <div id="Thank" style="display: none;">
+    <div id="Thank">
         <div class="text-center p-2">
             <h2 id="heading" class="gradient-text">
                 Gratitude Corner
             </h2>
             <p id="description"></p>
         </div>
-        <button class="design-button" onclick="displayRandomDiv()">Random</button>
+    
     </div>
     <br>
     
@@ -378,6 +410,10 @@
                 modifier: 1,
                 slideShadows: true,
             },
+            autoplay: {
+        delay: 3000, // Delay between transitions in milliseconds
+        disableOnInteraction: false, // Disable autoplay when user interacts with the slider
+    },
             // pagination: {
             //     el: ".swiper-pagination",
             // },
@@ -408,15 +444,13 @@
             var randomIndex = Math.floor(Math.random() * divIds.length);
             var randomDivId = divIds[randomIndex];
 
-            // Hide all divs except the randomly selected one
-            var allDivs = document.querySelectorAll('div[id^=""]');
-            allDivs.forEach(function(div) {
-                if (div.id === randomDivId) {
-                    div.style.display = 'block';
-                } else {
-                    div.style.display = 'none';
-                }
+            // Hide all content divs
+            divIds.forEach(function(divId) {
+                document.getElementById(divId).style.display = 'none';
             });
+
+            // Display the randomly selected div
+            document.getElementById(randomDivId).style.display = 'block';
 
             // Hide the swiper container
             var swiperContainer = document.querySelector('.swiper.mySwiper');
