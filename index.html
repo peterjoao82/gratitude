@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Gratitude</title>
+
+    <!-- slider stylesheet -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700|Roboto:400,700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+    <style>
+        .tagContainer {
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            /* Ensure the pseudo-element is positioned correctly */
+            overflow: hidden;
+            /* Prevent overflow of the background */
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .tagContainer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(https://media.istockphoto.com/id/1413873774/photo/business-team-portrait.jpg?s=612x612&w=0&k=20&c=OHUc90dYEltDCewDAcq1YZy3HSAGT0jB9suKME7Pg1w=);
+            background-size: cover;
+            /* Ensure the background image covers the container */
+            background-position: center;
+            /* Center the background image */
+            opacity: 0.5;
+            /* Adjust the opacity as needed */
+            z-index: -1;
+            /* Place the background behind the content */
+        }
+
+        .tag_card {
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            padding-top: 40px;
+        }
+
+        .tag_card--overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            /* Black overlay */
+            z-index: 1;
+            /* Positive z-index */
+        }
+
+        .tag_card--content {
+            position: relative;
+            /* Ensure content is above the overlay */
+            z-index: 2;
+            /* Ensure content is above the overlay */
+            padding: 20px;
+            color: white;
+        }
+
+        .button-box {
+            border: 2px solid white;
+            /* Border style */
+            border-radius: 10px;
+            /* Rounded corners */
+            display: inline-block;
+            /* Ensure button box wraps around button */
+        }
+
+        .button-box button {
+            background: transparent;
+            /* Transparent background for the button */
+            color: white;
+            /* Text color */
+            padding: 10px 20px;
+            /* Padding for the button */
+            border: none;
+            /* Remove default button border */
+            cursor: pointer;
+            /* Cursor style */
+            font-size: 20px;
+        }
+
+        .button-box:hover {
+            border-color: white;
+            /* Change border color on hover */
+        }
+
+        .button-box:hover button {
+            color: black;
+            /* Change text color on hover */
+        }
+
+        .swiper {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 300px;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+        }
+
+        .gradient-text {
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 34px;
+            /* Adjust size as needed */
+            background: linear-gradient(to bottom, #ffd700, #494206);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            /* text-fill-color: transparent; */
+        }
+
+        .gradient-text1 {
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 34px;
+            /* Adjust size as needed */
+            background: linear-gradient(to bottom, #000000, #000000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            /* text-fill-color: transparent; */
+        }
+
+        .gradient-text2 {
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 24px;
+            /* Adjust size as needed */
+            color: white;
+        }
+        .design-button{
+            border-radius: 10px;
+            padding: 10px 16px;
+            color: #000000;
+            border: none;
+            border-color: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- custom menu -->
+
+
+    <!-- custom menu -->
+
+    <!-- about section -->
+
+    <section class="about_section layout_padding mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="img-box" id="imageBox">
+                        <img id="mainImage" src="https://media.istockphoto.com/id/1413873774/photo/business-team-portrait.jpg?s=612x612&w=0&k=20&c=OHUc90dYEltDCewDAcq1YZy3HSAGT0jB9suKME7Pg1w="
+                            alt="" />
+                    </div><br>
+                </div>
+                <div class="col-md-5">
+                    <div class="detail-box content">
+                        <div class="custom_heading-container">
+                            <h2 id="heading" class="gradient-text">
+                                Golden Gratitude
+                            </h2>
+                        </div>
+
+                        <p id="description">
+                            Welcome to Golden Memories! This is a celebration of our journey together, filled with
+                            laughter, love, and unforgettable moments. Explore each section to relive the cherished
+                            times we've shared.
+                        </p>
+                        <div>
+                            <!-- <a href="">
+                About More
+              </a> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <div class="tagContainer">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="tag_card" style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)">
+                        <div class="tag_card--overlay"></div><!-- Black overlay -->
+                        <div class="tag_card--content">
+                            <div class="button-box">
+                                <button id="mainImage" onclick="toggleDiv('Childhood')"> #Childhood </button>
+                            </div>
+                            <p class="gradient-text2"><br>Innocent Beginnings</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="tag_card" style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)">
+                        <div class="tag_card--overlay"></div><!-- Black overlay -->
+                        <div class="tag_card--content">
+                            <div class="button-box">
+                                <button id="mainImage" onclick="toggleDiv('School')"> #School Days </button>
+                            </div>
+                            <p class="gradient-text2"><br>Scholarly Shenanigans</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="tag_card" style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)">
+                        <div class="tag_card--overlay"></div><!-- Black overlay -->
+                        <div class="tag_card--content">
+                            <div class="button-box">
+                                <button id="mainImage" onclick="toggleDiv('Adventures')"> #Adventures </button>
+                            </div>
+                            <p class="gradient-text2"><br>Epic Escapades</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="tag_card" style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)">
+                        <div class="tag_card--overlay"></div><!-- Black overlay -->
+                        <div class="tag_card--content">
+                            <div class="button-box">
+                                <button id="mainImage" onclick="toggleDiv('Celebrations')"> #Celebrations </button>
+                            </div>
+                            <p class="gradient-text2"><br>Party Time</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="tag_card" style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)">
+                        <div class="tag_card--overlay"></div><!-- Black overlay -->
+                        <div class="tag_card--content">
+                            <div class="button-box">
+                                <button id="mainImage" onclick="toggleDiv('Thank')"> #Thank You </button>
+                            </div>
+                            <br>
+                            <p class="gradient-text2"><br>Gratitude Corner</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <br>
+
+    <div id="Childhood" style="display: none;">
+        <div class="text-center p-2">
+
+            <h2 id="heading" class="gradient-text">
+                Innocent Beginnings
+            </h2>
+            <p id="description">Step back into the days of innocence and endless play. Relive our earliest adventures, from sandbox escapades to our first big dreams. These were the moments that laid the foundation for a lifelong friendship.</p>
+        </div>
+       
+        <button class="design-button" onclick="displayRandomDiv()">Random</button>
+    </div>
+    <div id="School" style="display: none;">
+        <div class="text-center p-2">
+            <h2 id="heading" class="gradient-text">
+                Scholarly Shenanigans
+            </h2>
+            <p id="description">From classroom capers to recess fun, school days were all about learning and laughter. Dive into the memories of school events, shared secrets, and the friendships that stood the test of time.</p>
+        </div>
+        <button class="design-button" onclick="displayRandomDiv()">Random</button>
+    </div>
+    <div id="Adventures" style="display: none;">
+        <div class="text-center p-2">
+            <h2 id="heading" class="gradient-text">
+                Epic Escapades
+            </h2>
+            <p id="description">Life's greatest stories often come from the unexpected. Join us on our epic escapades, from spontaneous road trips to wild summer breaks, where every detour became a memorable adventure.</p>
+        </div>
+        <button class="design-button" onclick="displayRandomDiv()">Random</button>
+    </div>
+    <div id="Celebrations" style="display: none;">
+        <div class="text-center p-2">
+            <h2 id="heading" class="gradient-text">
+                Party Time
+            </h2>
+            <p id="description">Every celebration was a chance to create unforgettable memories. Whether it was a surprise party, a milestone birthday, or just a festive get-together, these are the moments that brought pure joy.</p>
+        </div>
+        <button class="design-button" onclick="displayRandomDiv()">Random</button>
+    </div>
+
+    <div id="Thank" style="display: none;">
+        <div class="text-center p-2">
+            <h2 id="heading" class="gradient-text">
+                Gratitude Corner
+            </h2>
+            <p id="description"></p>
+        </div>
+        <button class="design-button" onclick="displayRandomDiv()">Random</button>
+    </div>
+    <br>
+    
+    
+    <br>
+    <div id="disqus_thread" class="p-3"></div>
+    <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://eternainfotech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            // pagination: {
+            //     el: ".swiper-pagination",
+            // },
+        });
+    </script>
+    <script>
+        function toggleDiv(divId) {
+            // Hide the swiper container
+            var swiperContainer = document.querySelector('.swiper.mySwiper');
+            swiperContainer.style.display = 'none';
+            document.getElementById('heading').classList.add('hidden');
+            document.getElementById('description').classList.add('hidden');
+            document.getElementById('imageBox').classList.add('hidden');
+            // Toggle the visibility of the clicked div
+            var div = document.getElementById(divId);
+            if (div.style.display === "none") {
+                div.style.display = "block";
+            } else {
+                div.style.display = "none";
+            }
+        }
+
+        function displayRandomDiv() {
+            // Array of div ids
+            var divIds = ['Childhood', 'School', 'Adventures', 'Celebrations', 'Thank'];
+
+            // Randomly select a div id
+            var randomIndex = Math.floor(Math.random() * divIds.length);
+            var randomDivId = divIds[randomIndex];
+
+            // Hide all divs except the randomly selected one
+            var allDivs = document.querySelectorAll('div[id^=""]');
+            allDivs.forEach(function(div) {
+                if (div.id === randomDivId) {
+                    div.style.display = 'block';
+                } else {
+                    div.style.display = 'none';
+                }
+            });
+
+            // Hide the swiper container
+            var swiperContainer = document.querySelector('.swiper.mySwiper');
+            swiperContainer.style.display = 'none';
+        }
+
+        document.getElementById('mainImage').addEventListener('click', function () {
+            document.getElementById('heading').classList.add('hidden');
+            document.getElementById('description').classList.add('hidden');
+            document.getElementById('imageBox').classList.add('hidden');
+            this.classList.add('hidden');
+            document.getElementById('tags').classList.remove('hidden');
+            showImagesForTag(tags[0]);
+            startAutoSlide();
+        });
+
+        // const tags = document.querySelectorAll('.tag');
+        // let currentTagIndex = 0;
+        // let interval;
+
+        // tags.forEach(tag => {
+        //     tag.addEventListener('click', function () {
+        //         clearInterval(interval);
+        //         currentTagIndex = Array.from(tags).indexOf(this);
+        //         showImagesForTag(this);
+        //         startAutoSlide();
+        //     });
+        // });
+
+        // function showImagesForTag(tag) {
+        //     const imageGrid = document.getElementById('imageGrid');
+        //     imageGrid.innerHTML = ''; // Clear any previous images
+        //     const images = tag.dataset.images.split(',');
+        //     images.forEach(imageSrc => {
+        //         const img = document.createElement('img');
+        //         img.src = `img/${imageSrc}`;
+        //         imageGrid.appendChild(img);
+        //     });
+        //     imageGrid.classList.remove('hidden');
+
+        //     // Highlight the active tag
+        //     tags.forEach(t => t.classList.remove('active'));
+        //     tag.classList.add('active');
+        // }
+
+        // function startAutoSlide() {
+        //     interval = setInterval(() => {
+        //         currentTagIndex = (currentTagIndex + 1) % tags.length;
+        //         showImagesForTag(tags[currentTagIndex]);
+        //     }, 3000); // Change images every 10 seconds
+        // }
+
+    </script>
+    <!-- <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/circles.min.js"></script>
+  <script src="js/custom.js"></script> -->
+
+
+</body>
+
+</html>
