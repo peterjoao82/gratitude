@@ -24,9 +24,9 @@
     <!-- fonts style -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700|Roboto:400,700&display=swap"
         rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet" />
     <!-- responsive style -->
@@ -172,13 +172,15 @@
             /* Adjust size as needed */
             color: white;
         }
-        .design-button{
+
+        .design-button {
             border-radius: 10px;
             padding: 10px 16px;
             color: #000000;
             border: none;
             border-color: none;
         }
+
         .image-container {
             display: flex;
             flex-wrap: wrap;
@@ -193,7 +195,8 @@
         .image-container a {
             display: inline-block;
             margin-bottom: 10px;
-            width: 100%; /* Ensure each image takes up full width */
+            width: 100%;
+            /* Ensure each image takes up full width */
         }
 
         .image-container img {
@@ -201,6 +204,26 @@
             height: auto;
             border: 1px solid #ccc;
             border-radius: 5px;
+        }
+
+        .gratitude-corner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .cornerImg {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cornerImg img {
+            width: 100%;
+            height: auto;
+            /* Maintain aspect ratio */
+            display: block;
         }
     </style>
 </head>
@@ -220,7 +243,8 @@
             <div class="row">
                 <div class="col-md-7">
                     <div class="img-box" id="imageBox">
-                        <img id="mainImage" src="https://media.istockphoto.com/id/1413873774/photo/business-team-portrait.jpg?s=612x612&w=0&k=20&c=OHUc90dYEltDCewDAcq1YZy3HSAGT0jB9suKME7Pg1w="
+                        <img id="mainImage"
+                            src="https://media.istockphoto.com/id/1413873774/photo/business-team-portrait.jpg?s=612x612&w=0&k=20&c=OHUc90dYEltDCewDAcq1YZy3HSAGT0jB9suKME7Pg1w="
                             alt="" />
                     </div><br>
                 </div>
@@ -310,7 +334,9 @@
             <h2 id="heading" class="gradient-text">
                 Innocent Beginnings
             </h2>
-            <p id="description">Step back into the days of innocence and endless play. Relive our earliest adventures, from sandbox escapades to our first big dreams. These were the moments that laid the foundation for a lifelong friendship.</p>
+            <p id="description">Step back into the days of innocence and endless play. Relive our earliest adventures,
+                from sandbox escapades to our first big dreams. These were the moments that laid the foundation for a
+                lifelong friendship.</p>
         </div>
 
         <div class="image-container">
@@ -324,57 +350,65 @@
                 <img src="https://swiperjs.com/demos/images/nature-2.jpg" alt="Image 3">
             </a>
         </div>
-       
-     <div class="text-center">
-<button class="design-button" onclick="displayRandomDiv()">Random Tags</button>
-</div>
+
+        <div class="text-center">
+            <button class="design-button" onclick="displayRandomDiv()">Random Tags</button>
+        </div>
     </div>
     <div id="School" style="display: none;">
         <div class="text-center p-2">
             <h2 id="heading" class="gradient-text">
                 Scholarly Shenanigans
             </h2>
-            <p id="description">From classroom capers to recess fun, school days were all about learning and laughter. Dive into the memories of school events, shared secrets, and the friendships that stood the test of time.</p>
+            <p id="description">From classroom capers to recess fun, school days were all about learning and laughter.
+                Dive into the memories of school events, shared secrets, and the friendships that stood the test of
+                time.</p>
         </div>
-     <div class="text-center">
-<button class="design-button" onclick="displayRandomDiv()">Random Tags</button>
-</div>
+        <div class="text-center">
+            <button class="design-button" onclick="displayRandomDiv()">Random Tags</button>
+        </div>
     </div>
     <div id="Adventures" style="display: none;">
         <div class="text-center p-2">
             <h2 id="heading" class="gradient-text">
                 Epic Escapades
             </h2>
-            <p id="description">Life's greatest stories often come from the unexpected. Join us on our epic escapades, from spontaneous road trips to wild summer breaks, where every detour became a memorable adventure.</p>
+            <p id="description">Life's greatest stories often come from the unexpected. Join us on our epic escapades,
+                from spontaneous road trips to wild summer breaks, where every detour became a memorable adventure.</p>
         </div>
-     <div class="text-center">
-<button class="design-button" onclick="displayRandomDiv()">Random Tags</button>
-</div>
+        <div class="text-center">
+            <button class="design-button" onclick="displayRandomDiv()">Random Tags</button>
+        </div>
     </div>
     <div id="Celebrations" style="display: none;">
         <div class="text-center p-2">
             <h2 id="heading" class="gradient-text">
                 Party Time
             </h2>
-            <p id="description">Every celebration was a chance to create unforgettable memories. Whether it was a surprise party, a milestone birthday, or just a festive get-together, these are the moments that brought pure joy.</p>
+            <p id="description">Every celebration was a chance to create unforgettable memories. Whether it was a
+                surprise party, a milestone birthday, or just a festive get-together, these are the moments that brought
+                pure joy.</p>
         </div>
-     <div class="text-center">
-<button class="design-button" onclick="displayRandomDiv()">Random Tags</button>
-</div>
+        <div class="text-center">
+            <button class="design-button" onclick="displayRandomDiv()">Random Tags</button>
+        </div>
     </div>
 
-    <div id="Thank">
+    <div id="Thank" class="gratitude-corner">
         <div class="text-center p-2">
             <h2 id="heading" class="gradient-text">
                 Gratitude Corner
             </h2>
             <p id="description"></p>
         </div>
-    
+        <div class="cornerImg">
+            <img src="https://swiperjs.com/demos/images/nature-2.jpg" alt="">
+        </div>
+
     </div>
     <br>
-    
-    
+
+
     <br>
     <div id="disqus_thread" class="p-3"></div>
     <script>
@@ -411,9 +445,9 @@
                 slideShadows: true,
             },
             autoplay: {
-        delay: 3000, // Delay between transitions in milliseconds
-        disableOnInteraction: false, // Disable autoplay when user interacts with the slider
-    },
+                delay: 3000, // Delay between transitions in milliseconds
+                disableOnInteraction: false, // Disable autoplay when user interacts with the slider
+            },
             // pagination: {
             //     el: ".swiper-pagination",
             // },
@@ -445,7 +479,7 @@
             var randomDivId = divIds[randomIndex];
 
             // Hide all content divs
-            divIds.forEach(function(divId) {
+            divIds.forEach(function (divId) {
                 document.getElementById(divId).style.display = 'none';
             });
 
