@@ -22,8 +22,13 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- fonts style -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700|Roboto:400,700&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Handlee&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
@@ -32,6 +37,23 @@
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
     <style>
+    
+    h2 {
+        
+          font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+    }
+    
+    p {
+     
+  font-family: "Handlee", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size:1.5rem;
+
+    }
         .tagContainer {
             font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
             font-size: 14px;
@@ -146,9 +168,9 @@
 
         .gradient-text {
             font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-            font-size: 34px;
+            font-size: 3rem;
             /* Adjust size as needed */
-            background: linear-gradient(to bottom, #ffd700, #494206);
+            background:linear-gradient(180deg, rgba(255,215,0,1) 56%, rgba(255,255,255,1) 97%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -176,9 +198,12 @@
         .design-button {
             border-radius: 10px;
             padding: 10px 16px;
-            color: #000000;
+            background: rgb(255,215,0);
+            background: linear-gradient(180deg, rgba(255,215,0,1) 89%, rgba(255,255,255,1) 97%);
             border: none;
             border-color: none;
+            color:white;
+            font-size:1.8rem;
         }
 
         .image-container {
@@ -378,7 +403,7 @@
         </div><br>
 
         <div class="text-center">
-            <button class="design-button" onclick="displayRandomDiv()">Random Tags</button>
+            <button class="design-button" onclick="displayRandomDiv()">Give Me More!</button>
         </div>
     </div>
     <div id="School" style="display: none;">
@@ -416,7 +441,7 @@
            
         </div><br>
         <div class="text-center">
-            <button class="design-button" onclick="displayRandomDiv()">Random Tags</button>
+            <button class="design-button" onclick="displayRandomDiv()">Give Me More!</button>
         </div>
     </div>
     <div id="Adventures" style="display: none;">
@@ -451,7 +476,7 @@
            
         </div><br>
         <div class="text-center">
-            <button class="design-button" onclick="displayRandomDiv()">Random Tags</button>
+            <button class="design-button" onclick="displayRandomDiv()">Give Me More!</button>
         </div>
     </div>
     <div id="Celebrations" style="display: none;">
@@ -506,7 +531,7 @@
            
         </div><br>
         <div class="text-center">
-            <button class="design-button" onclick="displayRandomDiv()">Random Tags</button>
+            <button class="design-button" onclick="displayRandomDiv()">Give Me More!</button>
         </div>
     </div>
 <br><br>
@@ -596,6 +621,11 @@ Thank You Message: "Thank you for being my rock, my confidant, and my source of 
             var randomIndex = Math.floor(Math.random() * divIds.length);
             var randomDivId = divIds[randomIndex];
 
+ window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+  
             // Hide all content divs
             divIds.forEach(function (divId) {
                 document.getElementById(divId).style.display = 'none';
@@ -607,6 +637,8 @@ Thank You Message: "Thank you for being my rock, my confidant, and my source of 
             // Hide the swiper container
             var swiperContainer = document.querySelector('.swiper.mySwiper');
             swiperContainer.style.display = 'none';
+            
+            
         }
 
         document.getElementById('mainImage').addEventListener('click', function () {
