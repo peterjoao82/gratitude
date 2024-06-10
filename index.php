@@ -1,3 +1,22 @@
+<?php
+
+
+$servername = "localhost";
+$username = "et_user";
+$password = "rMKex1xU,~)E";
+$databasename="golden_gratitude";
+
+
+// localhost connection
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $databasename="umc_website";
+$link = new mysqli($servername, $username, $password, $databasename);
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -91,6 +110,8 @@
             position: relative;
             overflow: hidden;
             padding-top: 40px;
+               background-size: cover;
+                  background-position: center;
         }
 
         .tag_card--overlay {
@@ -99,7 +120,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: rgba(0, 0, 0, 0.5);
             /* Black overlay */
             z-index: 1;
             /* Positive z-index */
@@ -118,6 +139,8 @@
             border: 2px solid white;
             /* Border style */
             border-radius: 10px;
+            background-color:White;
+            color:#ffd700 ;
             /* Rounded corners */
             display: inline-block;
             /* Ensure button box wraps around button */
@@ -126,7 +149,7 @@
         .button-box button {
             background: transparent;
             /* Transparent background for the button */
-            color: white;
+            color:#dbb600 ;
             /* Text color */
             padding: 10px 20px;
             /* Padding for the button */
@@ -203,10 +226,62 @@
             border: none;
             border-color: none;
             color:white;
-            font-size:1.8rem;
+            font-size:1.6rem;
+        }
+        
+        .form_button{
+            font-size:1.2rem;
+            width:100% !important;
+            
         }
 
         .image-container {
+  /* Prevent vertical gaps */
+  width: 100%;
+  line-height: 0;
+   
+  -webkit-column-count: 5;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    5;
+  -moz-column-gap:      0px;
+  column-count:         5;
+  column-gap:           0px;  
+}
+
+.image-container img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+}
+@media (max-width: 1200px) {
+  .image-container {
+  -moz-column-count:    4;
+  -webkit-column-count: 4;
+  column-count:         4;
+  }
+}
+@media (max-width: 1000px) {
+  .image-container {
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
+}
+@media (max-width: 800px) {
+  .image-container {
+  -moz-column-count:    2;
+  -webkit-column-count: 2;
+  column-count:         2;
+  }
+}
+@media (max-width: 400px) {
+  .image-container {
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
+  }
+}
+        /* .image-container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -222,17 +297,17 @@
     margin-bottom: 10px;
     width: 100%;
     /* Ensure each image takes up full width */
-}
+/* } */
 
-.image-container img {
+/* .image-container img {
     max-width: 100%;
     height: auto;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
+} */ 
 
 /* Media query for desktop screens */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .image-container {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -241,9 +316,9 @@
 
     .image-container a {
         width: auto;
-        /* Reset width to auto to allow grid to manage the width */
+       
     }
-}
+} */
 
 
         .gratitude-corner {
@@ -265,6 +340,58 @@
             /* Maintain aspect ratio */
             display: block;
         }
+        
+        
+        .form_wrapper{
+            border:2px solid #efefef;
+            padding:5%;
+            margin:5vw;
+        }
+        
+        .form_wrapper textarea {
+            margin-top:1vh;
+            width:100% !important;
+              font-family: "Handlee", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size:1rem;
+    padding:2%;
+            
+        }
+        
+        .form_wrapper input {
+                   width:100% !important;
+                     font-family: "Handlee", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size:1rem;
+  padding:2%;
+              
+        }
+        
+        .individual_thought{
+                margin:5vw;
+                
+        }
+        
+        .thought_text{
+            font-size:1.6rem;
+            font-weight:600;
+        }
+        
+        .thought_name{
+            text-align:right !important;
+            color:#9b9b9b;
+        }
+        
+        .delete_button{
+            background-color:#c91818;
+            color:white;
+            border:none;
+            padding:2vw 4vw;
+          
+        }
+        
     </style>
 </head>
 
@@ -318,7 +445,7 @@
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="tag_card" style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg )">
+                    <div class="tag_card" style="background-image:url(img/InnocentBeginnings/6.jpeg)">
                         <div class="tag_card--overlay"></div><!-- Black overlay -->
                         <div class="tag_card--content">
                             <div class="button-box">
@@ -329,7 +456,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="tag_card" style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)">
+                    <div class="tag_card" style="background-image:url(img/ScholarlyShenanigans/8.jpeg)">
                         <div class="tag_card--overlay"></div><!-- Black overlay -->
                         <div class="tag_card--content">
                             <div class="button-box">
@@ -340,7 +467,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="tag_card" style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)">
+                    <div class="tag_card" style="background-image:url(img/EpicEscapades/8.jpeg)">
                         <div class="tag_card--overlay"></div><!-- Black overlay -->
                         <div class="tag_card--content">
                             <div class="button-box">
@@ -351,7 +478,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="tag_card" style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)">
+                    <div class="tag_card" style="background-image:url(img/PartyTimeWork-LifeBalance/4.jpeg)">
                         <div class="tag_card--overlay"></div><!-- Black overlay -->
                         <div class="tag_card--content">
                             <div class="button-box">
@@ -552,25 +679,65 @@ Thank You Message: "Thank you for being my rock, my confidant, and my source of 
     <br>
 
 
-    <br>
-    <div id="disqus_thread" class="p-3"></div>
-    <script>
-        /**
-        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-        /*
-        var disqus_config = function () {
-        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-        */
-        (function () { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://eternainfotech.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-    </script>
+    <br>  <div class="text-center p-2">
+        <h2 id="heading" class="gradient-text">
+            Your Thoughts
+        </h2>
+  </div>
+  
+  <div class="form_wrapper">
+          <form method="POST">
+      <div class="form-class">
+          <textarea name="thought" col="35"  placeholder="Enter your thoughts"></textarea>
+           <input type="hidden" id="userCode" name="userCode" value="">
+          <br>     <br>
+          <input type="text" placeholder="Your Name" name="name" required/>
+            <br>     <br>     <br>
+             <div class="text-center">
+        <button class="design-button form_button" type="submit" name="post_thought" >Submit</button>
+    </div>
+      </div>
+  </form>
+  
+  </div>
+  
+  <hr>
+  
+
+      <?php
+    $query = "SELECT * FROM master_comments where is_active=1  ORDER BY added_on;";
+            $result = mysqli_query($link, $query);
+            while ($row = mysqli_fetch_array($result)) {
+                
+               ?>
+               
+                   <div class="individual_thought">
+               <p class="thought_text">
+                   <?php echo  $row['thought']; ?>
+               </p>
+               
+                <p class="thought_name">
+                   <?php echo  $row['name']; ?>
+               </p>
+               
+               <form method="POST">
+                         <input type="hidden"  name="id" value="  <?php echo  $row['id']; ?>">
+                    <button class="<?php echo  $row['user_code']; ?> delete_button" type="submit" name="delete_thought" hidden>
+                   Delete 
+               </button>
+               </form>
+              
+               
+               </div>
+              
+               <?php
+               
+            }
+
+?>
+
+  <br>  <br>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
@@ -697,3 +864,57 @@ Thank You Message: "Thank you for being my rock, my confidant, and my source of 
 </body>
 
 </html>
+
+
+<?php
+
+
+
+if(isset($_POST['post_thought'])) {
+    
+    $thought = mysqli_real_escape_string($link, $_POST['thought']);
+    $name = mysqli_real_escape_string($link, $_POST['name']);
+    $userCode =  $_POST['userCode'];
+    
+    $query = "INSERT INTO master_comments (`name`, `thought`, `added_on`,`user_code`) values ('$name','$thought', SYSDATE(),$userCode)";
+    $result1 = mysqli_query($link, $query);
+    
+    if($result1){
+         echo "<script>
+      swal({
+      title: 'Your Thought has been captured. Thank you',
+      icon: 'success',
+      }).then((value) => {
+      window.location.href = 'index';
+      });
+  
+      </script>";
+    }
+    
+}
+
+
+if(isset($_POST['delete_thought'])) {
+     $id =  $_POST['id'];
+     
+     $query = "UPDATE master_comments set is_active=0 where id=$id";
+        $result2 = mysqli_query($link, $query);
+     
+         if($result2){
+         echo "<script>
+      swal({
+      title: 'Your Thought has been Deleted',
+      icon: 'success',
+      }).then((value) => {
+      window.location.href = 'index';
+      });
+  
+      </script>";
+    }
+        
+}
+
+
+
+
+?>
