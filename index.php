@@ -508,6 +508,9 @@ $link = new mysqli($servername, $username, $password, $databasename);
             <a href="img/InnocentBeginnings/4.jpeg" data-fancybox="images">
                 <img src="img/InnocentBeginnings/4.jpeg" alt="Image 1">
             </a>
+            <a href="img/InnocentBeginnings/8.jpeg" data-fancybox="images">
+                <img src="img/InnocentBeginnings/8.jpeg" alt="Image 1">
+            </a>
             <a href="img/InnocentBeginnings/1.jpeg" data-fancybox="images">
                 <img src="img/InnocentBeginnings/1.jpeg" alt="Image 1">
             </a>
@@ -517,11 +520,12 @@ $link = new mysqli($servername, $username, $password, $databasename);
             <a href="img/InnocentBeginnings/6.jpeg" data-fancybox="images">
                 <img src="img/InnocentBeginnings/6.jpeg" alt="Image 1">
             </a>
-            <a href="img/InnocentBeginnings/8.jpeg" data-fancybox="images">
-                <img src="img/InnocentBeginnings/8.jpeg" alt="Image 1">
-            </a>
+            
             <a href="img/InnocentBeginnings/9.jpeg" data-fancybox="images">
                 <img src="img/InnocentBeginnings/9.jpeg" alt="Image 1">
+            </a>
+            <a href="img/InnocentBeginnings/7.jpeg" data-fancybox="images">
+                <img src="img/InnocentBeginnings/7.jpeg" alt="Image 1">
             </a>
           
            
@@ -545,24 +549,30 @@ $link = new mysqli($servername, $username, $password, $databasename);
             <a href="img/ScholarlyShenanigans/2.jpeg" data-fancybox="images">
                 <img src="img/ScholarlyShenanigans/2.jpeg" alt="Image 1">
             </a>
+            <a href="img/ScholarlyShenanigans/5.jpeg" data-fancybox="images">
+                <img src="img/ScholarlyShenanigans/5.jpeg" alt="Image 1">
+            </a>
             <a href="img/ScholarlyShenanigans/1.jpeg" data-fancybox="images">
                 <img src="img/ScholarlyShenanigans/1.jpeg" alt="Image 1">
             </a>
+            
             <a href="img/ScholarlyShenanigans/3.jpeg" data-fancybox="images">
                 <img src="img/ScholarlyShenanigans/3.jpeg" alt="Image 1">
             </a>
             <a href="img/ScholarlyShenanigans/8.jpeg" data-fancybox="images">
                 <img src="img/ScholarlyShenanigans/8.jpeg" alt="Image 1">
             </a>
+            <a href="img/ScholarlyShenanigans/7.jpeg" data-fancybox="images">
+                <img src="img/ScholarlyShenanigans/7.jpeg" alt="Image 1">
+            </a>
             <a href="img/ScholarlyShenanigans/4.jpeg" data-fancybox="images">
                 <img src="img/ScholarlyShenanigans/4.jpeg" alt="Image 1">
             </a>
-            <a href="img/ScholarlyShenanigans/5.jpeg" data-fancybox="images">
-                <img src="img/ScholarlyShenanigans/5.jpeg" alt="Image 1">
-            </a>
+           
             <a href="img/ScholarlyShenanigans/6.jpeg" data-fancybox="images">
                 <img src="img/ScholarlyShenanigans/6.jpeg" alt="Image 1">
             </a>
+            
            
         </div><br>
         <div class="text-center">
