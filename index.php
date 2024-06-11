@@ -13,9 +13,7 @@ $databasename="golden_gratitude";
 // $password = "";
 // $databasename="umc_website";
 $link = new mysqli($servername, $username, $password, $databasename);
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -240,11 +238,11 @@ if ($conn->connect_error) {
   width: 100%;
   line-height: 0;
    
-  -webkit-column-count: 5;
+  -webkit-column-count: 3;
   -webkit-column-gap:   0px;
-  -moz-column-count:    5;
+  -moz-column-count:    3;
   -moz-column-gap:      0px;
-  column-count:         5;
+  column-count:         3;
   column-gap:           0px;  
 }
 
