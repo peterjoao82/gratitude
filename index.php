@@ -1,6 +1,6 @@
 <?php
 
-
+// $servername = "184.168.103.26";
 $servername = "localhost";
 $username = "et_user";
 $password = "rMKex1xU,~)E";
@@ -486,6 +486,17 @@ $link = new mysqli($servername, $username, $password, $databasename);
                         </div>
                     </div>
                 </div>
+                <div class="swiper-slide">
+                    <div class="tag_card" style="background-image:url(img/memories/1.jpeg)">
+                        <div class="tag_card--overlay"></div><!-- Black overlay -->
+                        <div class="tag_card--content">
+                            <div class="button-box">
+                                <button id="mainImage" onclick="toggleDiv('Memorable')"> # Memorable 2024 </button>
+                            </div>
+                            <p class="gradient-text2"><br> emorable 2024</p>
+                        </div>
+                    </div>
+                </div>
 
             </div>
             <div class="swiper-pagination"></div>
@@ -663,6 +674,44 @@ $link = new mysqli($servername, $username, $password, $databasename);
             </a>
             
             
+           
+        </div><br>
+        <div class="text-center">
+            <button class="design-button" onclick="displayRandomDiv()">Give Me More!</button>
+        </div>
+    </div>
+    <div id="Memorable" style="display: none;">
+        <div class="text-center p-2">
+            <h2 id="heading" class="gradient-text">
+            Memorable 2024
+            </h2>
+            <p id="description"></p>
+        </div>
+        <div class="image-container">
+                     
+            <a href="img/memories/1.jpeg" data-fancybox="images">
+                <img src="img/memories/1.jpeg" alt="Image 1">
+            </a>
+            <a href="img/memories/2.jpeg" data-fancybox="images">
+                <img src="img/memories/2.jpeg" alt="Image 1">
+            </a>
+            <a href="img/memories/3.jpeg" data-fancybox="images">
+                <img src="img/memories/3.jpeg" alt="Image 1">
+            </a>
+            <a href="img/memories/6.jpeg" data-fancybox="images">
+                <img src="img/memories/6.jpeg" alt="Image 1">
+            </a>
+            <a href="img/memories/4.jpeg" data-fancybox="images">
+                <img src="img/memories/4.jpeg" alt="Image 1">
+            </a>
+            <a href="img/memories/5.jpeg" data-fancybox="images">
+                <img src="img/memories/5.jpeg" alt="Image 1">
+            </a>
+           
+            <a href="img/memories/7.jpeg" data-fancybox="images">
+                <img src="img/memories/7.jpeg" alt="Image 1">
+            </a>
+          
            
         </div><br>
         <div class="text-center">
