@@ -491,9 +491,9 @@ $link = new mysqli($servername, $username, $password, $databasename);
                         <div class="tag_card--overlay"></div><!-- Black overlay -->
                         <div class="tag_card--content">
                             <div class="button-box">
-                                <button id="mainImage" onclick="toggleDiv('Memorable')"> # Memorable 2024 </button>
+                                <button id="mainImage" onclick="toggleDiv('Memorable')"> #Memorable 2024 </button>
                             </div>
-                            <p class="gradient-text2"><br> emorable 2024</p>
+                            <p class="gradient-text2"><br>Memorable 2024</p>
                         </div>
                     </div>
                 </div>
