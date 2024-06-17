@@ -839,7 +839,7 @@ Thank You Message: "Thank you for being my rock, my confidant, and my source of 
 
         function displayRandomDiv() {
             // Array of div ids
-            var divIds = ['Childhood', 'School', 'Adventures', 'Celebrations'];
+            var divIds = ['Childhood', 'School', 'Adventures', 'Celebrations', 'Memorable'];
 
             // Randomly select a div id
             var randomIndex = Math.floor(Math.random() * divIds.length);
